@@ -42,7 +42,7 @@ namespace DatingApp.API.Controllers
                 Username = userForRegisterDto.Username
             };
 
-            var createdUser = await _repo.Register(userToCreate, userForRegisterDto.password);
+            var createdUser = await _repo.Register(userToCreate, userForRegisterDto.Password);
 
             return StatusCode(201);
         }
@@ -50,6 +50,7 @@ namespace DatingApp.API.Controllers
         [HttpPost("Login")]
         public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
         {
+             // throw new Exception("Computer says no");
             var userFromRepo  = await _repo.Login(userForLoginDto.Username, userForLoginDto.Password);
             if(userFromRepo == null)
                 return Unauthorized();
