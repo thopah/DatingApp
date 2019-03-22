@@ -38,9 +38,12 @@ export class MemberDetailComponent implements OnInit {
     const imageUrls = [];
     for (let i = 0; i < this.user.photos.length; i++) {
       imageUrls.push({
-        small: 'assets/_images/mark.png',
-        medium: 'assets/_images/mark.png',
-        big: 'assets/_images/mark.png',
+        // small: 'assets/_images/mark.png',
+        // medium: 'assets/_images/mark.png',
+        // big: 'assets/_images/mark.png',
+        small: this.user.photos[i].url,
+        medium: this.user.photos[i].url,
+        big: this.user.photos[i].url,
       });
     }
     return imageUrls;
