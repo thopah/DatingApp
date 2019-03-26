@@ -10,8 +10,10 @@ import { catchError } from 'rxjs/operators';
 export class MemberListResolver implements Resolve<User[]> {
     constructor(private userService: UserService, private router: Router, private alertity: AlertifyService) {}
 
+    pageNumber = 1;
+    pageSize = 5;
     resolve(route: ActivatedRouteSnapshot): Observable<User[]> {
-        return this.userService.getUsers().pipe(
+        return this.userService.getUsers(this.pageNumber, this.pageSize).pipe(
             catchError(error => {
                 this.alertity.error(error);
                 this.router.navigate(['/members']);
