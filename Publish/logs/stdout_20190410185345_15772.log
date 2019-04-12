@@ -1,0 +1,10 @@
+warn: Microsoft.AspNetCore.DataProtection.Repositories.EphemeralXmlRepository[50]
+      Using an in-memory repository. Keys will not be persisted to storage.
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[59]
+      Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {d4ff9167-749c-4e09-bae2-52d4564a772b} may be persisted to storage in unencrypted form.
+Hosting environment: Production
+Content root path: C:\Yaoming\udemy-ASPNetCore_And_Angular\DatingApp\Publish
+Application started. Press Ctrl+C to shut down.
+Application is shutting down...
